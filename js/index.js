@@ -177,8 +177,11 @@ var visitCount = null;
 
     function loadVisit() {
         $.ajax({
-            url: '../../visitinfo.ashx?method=get&from=mysite',
-            dataType: 'json',
+            url: 'http://www.zhangweixiang.com/visitInfo.ashx?method=get&from=mobile',
+	    dataType: 'jsonp',
+            timeout: 1000 * 3, // 3 sec
+	    jsonp: "callback",  
+    	    jsonpCallback: "jsonpCallback",
             success: function(data) {
                 processPageView(data);
             },
