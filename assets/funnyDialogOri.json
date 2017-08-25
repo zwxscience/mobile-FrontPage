@@ -1,0 +1,909 @@
+{
+    "fromXianzhe": [
+        {
+            "id": "0000", 
+            "details": [
+                [
+                    "诶，你来啦？"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "来啦来啦，这个地方好像挺有趣的样子~", 
+                    "nextXianzhe": [
+                        "0003"
+                    ]
+                }, 
+                {
+                    "content": "咋地，还要请我坐坐？", 
+                    "nextXianzhe": [
+                        "0001"
+                    ]
+                }, 
+                {
+                    "content": "这是啥呀？你是谁？从哪来？要干什么？", 
+                    "nextXianzhe": [
+                        "0002"
+                    ]
+                }
+            ], 
+            "nextUser": [
+                "1000"
+            ]
+        }, 
+        {
+            "id": "0001", 
+            "details": [
+                [
+                    "……", 
+                    "你随意"
+                ]
+            ], 
+            "nextXianzhe": [
+                "0003"
+            ]
+        }, 
+        {
+            "id": "0002", 
+            "details": [
+                [
+                    "别急别急，咱俩一步一步认识，行不？"
+                ]
+            ], 
+            "nextXianzhe": [
+                "0003"
+            ]
+        }, 
+        {
+            "id": "0003", 
+            "details": [
+                [
+                    "那么你想知道点什么？"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "你是谁？", 
+                    "nextXianzhe": [
+                        "0004"
+                    ]
+                }, 
+                {
+                    "content": "此章微详是啥意思？", 
+                    "nextXianzhe": [
+                        "0005"
+                    ]
+                }, 
+                {
+                    "content": "问什么都可以吗？", 
+                    "nextXianzhe": [
+                        "0006"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "id": "0004", 
+            "details": [
+                [
+                    "嗯，这个嘛……", 
+                    "貌似命题很大呀", 
+                    "既然我们在这里聊天了，那就叫我此章微详吧！(•‾̑⌣‾̑•)✧˖°"
+                ]
+            ], 
+            "nextXianzhe": [
+                "0005"
+            ]
+        }, 
+        {
+            "id": "0005", 
+            "details": [
+                [
+                    "如果足够细心的话，你会发现这是我名字的缩写啊", 
+                    "兴之所至，此章微详。因为想所以就有了,关于创建网站的想法，可能是想无耻的炫耀一把？ξ (ˉ▽￣～)", 
+                    "摩西诗篇里说我们度尽的年岁，好像一声叹息。我们一生的年日是七十岁，若是强壮可到八十岁",
+					"但其中所矜夸的不过是劳苦烦愁，转眼成空，我们便如飞而去...", 
+					"说了这么多，要不要来点音乐舒缓一下？"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "不要，你继续往下编...", 
+                    "nextXianzhe": [
+                        "0033"
+                    ]
+                }, 
+                {
+                    "content": "那就来一曲吧", 
+                    "nextXianzhe": [
+                        "0034",
+						"0033"
+                    ]
+                }
+            ]
+        }, 
+		{
+            "id": "0033", 
+            "details": [
+                [
+					"所以说", 
+                    "生活是痛苦的，会让人慢慢平庸。所以内心深处希望有个地方，能让自己稍稍有些不同", 
+                    "想要了解更多的话具体看这篇文章吧，<a href='http://blog.zhangweixiang.com/2016/01/25/website-name/'>http://blog.zhangweixiang.com/2016/01/25/website-name/</a>"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "你是干啥的？", 
+                    "nextXianzhe": [
+                        "0007"
+                    ]
+                }, 
+                {
+                    "content": "你这里都有啥啊？", 
+                    "nextXianzhe": [
+                        "0008"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "id": "0006", 
+            "details": [
+                [
+                    "可以啊……", 
+                    "只要你能问我就敢回答哈哈哈:-D"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "……", 
+                    "nextXianzhe": [
+                        "0003"
+                    ]
+                }, 
+                {
+                    "content": "蒜你狠！"
+                }
+            ]
+        }, 
+        {
+            "id": "0007", 
+            "details": [
+                [
+                    "我啊，码农一个", 
+                    "以前是在计算机领域，现在跨到了通信领域", 
+                    "原来在CNKI做图像搜索", 
+                    "目前是在诺基亚工作的LTE研发工程师"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "CNKI不就是写论文经常用到的那个...", 
+                    "nextXianzhe": [
+                        "0027"
+                    ]
+                }, 
+                {
+                    "content": "咦，诺基亚啊，还没倒闭吗？", 
+                    "nextXianzhe": [
+                        "0009"
+                    ]
+                }, 
+                {
+                    "content": "你想跳槽吗？", 
+                    "nextXianzhe": [
+                        "0011"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "id": "0009", 
+            "details": [
+                [
+                    "对，我们还活着呢！", 
+                    "从手机业务转到基站业务，诺基亚仍然砥砺前行", 
+                    "而且最近不断推出手机和智能穿戴设备呢", 
+                    "偷偷告诉你，这是<a href='http://55895407.m.weimob.com/vshop/55895407/Index?PageId=526930&IsPre=1'>诺基亚内部商城</a>，优惠很大哦"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "有这种福利？我看看有什么要买的", 
+                    "nextXianzhe": [
+                        "0003"
+                    ]
+                },
+				{
+                    "content": "真不错，那你们还招人吗？", 
+                    "nextXianzhe": [
+                        "0010"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "id": "0010", 
+            "details": [
+                [
+                    "我们一直在招兵买马啊，咳咳....", 
+                    "工厂招工若干，不包吃住，男女不限，早九晚六，工资月结，不加班，不拖欠，有五险", 
+                    "我们<a href='http://u89526693.h5.xingdongliu.com/h5preview/UXINGDONGLIUKUAIZHANINITIAL89526693?source=MDAwMDAwMDAwMDAwMDA4ZTYwZWZj&from=timeline'>部门招聘在这里</a> 查看，是个美女写的哦", 
+                    "具体公司招聘请关注官网啊，经常有招人消息的"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "不加班，这个好，那你业余时间做什么？", 
+                    "nextXianzhe": [
+                        "0012"
+                    ]
+                }, 
+                {
+                    "content": "好的，那我看看"
+                }
+            ]
+        }, 
+        {
+            "id": "0011", 
+            "details": [
+                [
+                    "虽然暂时没有换工作的打算，不过对于有趣的工作机会保持开放态度", 
+                    "我的简历可以在 <a href='http://zhangweixiang.com/cv'>这里</a> 查看", 
+                    "如果能认同我的技术能力和三观，欢迎邮件至 <a href='mailto:zwxscience@163.com'>zwxscience@163.com</a> ，求勾搭~", 
+                    "其实换个领域工作，也挺不错的嘛~"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "哈哈好的，等我开公司当老板，就来请你", 
+                    "nextXianzhe": [
+                        "0026"
+                    ]
+                }, 
+                {
+                    "content": "好，我看看", 
+                    "nextXianzhe": [
+                        "0003"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "id": "0012", 
+            "details": [
+                [
+                    "以前业余时间就是看就是看书和动漫，偶尔也爬爬山……", 
+                    "我还挺喜欢RPG游戏的，同学认为这个很弱智，无脑刷怪升级，每次看到就说，唉，又杀猪啦 (￣ェ￣;)", 
+                    "但是结婚有娃后，基本没啥时间了，你懂的。但我抽空忙闲还是看看书~", 
+                    "当然看书多了还会偶尔写写东西的，虽然字很丑"
+                ]
+            ], 
+			"responses": [
+                {
+                    "content": "这么有才，原来你喜欢看书啊", 
+                    "nextXianzhe": [
+                        "0013"
+                    ]
+                }, 
+                {
+                    "content": "哎呦，会写诗，牛逼啊", 
+                    "nextXianzhe": [
+                        "0026", 
+                        "0031"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "id": "0013", 
+            "details": [
+                [
+                    "我最大的爱好就是看书啦", 
+                    "只要一有空，就会抱着kindle啃", 
+                    "人家说读书破万卷，我已经点破一个kindle了", 
+                    "媳妇经常对我说，再看眼睛都看没了(●′ω`●)", 
+                    "我娃也经常眯着眼睛学我,可以看下面这个....", 
+                    "<img src='img/wa0.jpg'>"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "你都看些什么书?", 
+                    "nextXianzhe": [
+                        "0014"
+                    ]
+                }, 
+                {
+                    "content": "有资源吗？", 
+                    "nextXianzhe": [
+                        "0015"
+                    ]
+                }, 
+                {
+                    "content": "这么逗，我要看看你娃", 
+                    "nextXianzhe": [
+                        "0022"
+                    ]
+                }, 
+                {
+                    "content": "你一定是个很温和的人", 
+                    "nextXianzhe": [
+                        "0030"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "id": "0014", 
+            "details": [
+                [
+                    "好读书不求甚解，涉猎广泛。输入量大输出太少以至于经常被吐槽。像小说，专业书籍比较多吧"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "不错，我也有好书推荐给你", 
+                    "nextXianzhe": [
+                        "0026", 
+                        "0016"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "id": "0016", 
+            "details": [
+                [
+                    "那就邮件联系我吧", 
+                    "<a href='mailto:zwxscience@163.com'>zwxscience@163.com</a>"
+                ]
+            ]
+        }, 
+        {
+            "id": "0015", 
+            "details": [
+                [
+                    "当然有资源了，而且还不少", 
+                    "我的网盘里有大约有<strong>200G</strong>的数据，如果想要的话给我邮件"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "好啊！有这么多资源，我要~", 
+                    "nextXianzhe": [
+                        "0016"
+                    ]
+                }, 
+                {
+                    "content": "算了，我不是很感兴趣……", 
+                    "nextXianzhe": [
+                        "0017"
+                    ]
+                }, 
+                {
+                    "content": "这么辛苦，一定耗费了不少精力吧，给你发个红包吧", 
+                    "nextXianzhe": [
+                        "0018"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "id": "0017", 
+            "details": [
+                [
+                    "哦(#‘′)凸 "
+                ], 
+                [
+                    "好吧……>_<||| "
+                ], 
+                [
+                    "无所谓~"
+                ]
+            ]
+        }, 
+        {
+            "id": "0018", 
+            "details": [
+                [
+                    "嘿嘿嘿[搓手]", 
+                    "如果愿意的话，可以给我支付宝或者微信打赏，多少随意哈！", 
+                    "<img src='img/weixin.png'>", 
+                    "<img src='img/zhifubao.jpg'>", 
+                    "或者直接进入<a href='http://blog.zhangweixiang.com/tip/'>这里</a>，有首小诗哦"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "有啥好处？", 
+                    "nextXianzhe": [
+                        "0019"
+                    ]
+                }, 
+                {
+                    "content": "已打赏，快谢恩！", 
+                    "nextXianzhe": [
+                        "0020"
+                    ]
+                }, 
+                {
+                    "content": "哎，我很穷啊……", 
+                    "nextXianzhe": [
+                        "0021"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "id": "0019", 
+            "details": [
+                [
+                    "比如……", 
+                    "祝愿你出走半生，归来仍是少年？", 
+                    "嘿嘿，给你寄一张西湖的明信片怎么样，上有天堂，下有...."
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "好哒！"
+                }, 
+                {
+                    "content": "算啦~"
+                }
+            ]
+        }, 
+        {
+            "id": "0020", 
+            "details": [
+                [
+                    "谢大爷赏！！！( $ _ $ ) ", 
+                    "嘿嘿，如果需要明信片，打赏后可以发邮件告诉我你的收信地址", 
+                    "<a href='mailto:zwxscience@163.com'>zwxscience@163.com</a>"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "好哒！"
+                }
+            ]
+        }, 
+        {
+            "id": "0021", 
+            "details": [
+                [
+                    "嘿嘿，没关系，你能够在这个网站多停留一秒，我就很开心啦！谢谢谢谢～<(￣︶￣)>"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "O(∩_∩)O哈哈~", 
+                    "nextXianzhe": [
+                        "0003"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "id": "0008", 
+            "details": [
+                [
+                    "在庞大的网络中这里是个不起眼的地方，里面放一些日志或者自己觉得有意思的东西，分享给大家", 
+                    "这个是<a href='http://zhangweixiang.com/cv/'>我的简历</a>，票子多的地方请招手！", 
+                    "这个是<a href='http://blog.zhangweixiang.com/'>我的Blog</a>，里面会不定期写一些日志或者技术分享，最近都是写的关于娃的东西呢", 
+					"这个是<a href='https://github.com/zwxscience'>我的GitHub</a>，里面有你想看到的源码",
+					"这个是<a href='http://weibo.com/weixiazh'>我的微博</a>，欢迎互动"
+                    
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "你经常分享关于你娃的日志，现在长啥样啦？", 
+                    "nextXianzhe": [
+                        "0022"
+                    ]
+                }, 
+                {
+                    "content": "哎呦，不错哦，怎么做的啊", 
+                    "nextXianzhe": [
+                        "0023"
+                    ]
+                }, 
+                {
+                    "content": "这个网站一定花了不少钱吧", 
+                    "nextXianzhe": [
+                        "0024"
+                    ]
+                },                
+				{
+                    "content": "嘿嘿，有彩蛋吗？", 
+                    "nextXianzhe": [
+                        "0032"
+                    ]
+                } 
+            ]
+        }, 
+        {
+            "id": "0022", 
+            "details": [
+                [
+                    "是不是觉得我娃很可爱呢", 
+                    "也不看看是谁生的嘿嘿", 
+                    "这是我娃最新的玉照"
+                ]
+            ], 
+            "nextXianzhe": [
+                "0025"
+            ]
+        }, 
+        {
+            "id": "0025", 
+            "details": [
+                [
+                    "<img src='img/wa1.jpg'>", 
+                    "<img src='img/wa2.jpg'>", 
+                    "<img src='img/wa3.jpg'>"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "真好～", 
+                    "nextXianzhe": [
+                        "0026"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "id": "0023", 
+            "details": [
+                [
+                    "主要是平时一点点积累起来的,平时会关注一些开源社区，GitHub,StackFlow..", 
+                    "许多前端页面的产生，大部分是忽然有个idea，然后从开源社区一搜，嘿果然有，然后拿过来敲敲打打，像这个<a href='https://github.com/zwxscience/mobile-FrontPage'>网页对话游戏</a>就是，比起形式我更加注重内容吧", 
+                    "毕竟除了工作和带娃没啥时间不是……"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "挺辛苦啊，给你点打赏", 
+                    "nextXianzhe": [
+                        "0018"
+                    ]
+                }, 
+                {
+                    "content": "唔……继续努力！", 
+                    "nextXianzhe": [
+                        "0026"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "id": "0026", 
+            "details": [
+                [
+                    "谢谢(^_^)∠※"
+                ], 
+                [
+                    "(*^‧^*)"
+                ], 
+                [
+                    "嘿嘿嘿嘿~(•‾̑⌣‾̑•)✧˖°"
+                ]
+            ]
+        }, 
+        {
+            "id": "0027", 
+            "details": [
+                [
+                    "是啊，只要发论文的童鞋都知道", 
+                    "我在图像元知识部门负责图像检索和网站建设", 
+                    "虽然底层算法看不到，但还可以进去<a href='http://image.cnki.net'>体验一把</a>，虽然过去三四年了，但还是挺好看的嘛", 
+                    "<img src='img/cnki.png'>", 
+                    "<img src='img/cnki2.png'>"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "自恋狂，马马虎虎吧~"
+                }
+            ]
+        }, 
+        {
+            "id": "0028", 
+            "details": [
+                [
+                    "既然你诚心诚意的发问了 为了防止世界被破坏 ", 
+                    "为了维护世界的和平 贯彻爱与真实的邪恶", 
+                    "可爱又迷人的正派角色", 
+                    "就是我", 
+                    "<img src='img/me.jpg'>"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "什么呀，一点都不帅嘛~", 
+                    "nextXianzhe": [
+                        "0029"
+                    ]
+                }, 
+                {
+                    "content": "哥，你老帅了~", 
+                    "nextXianzhe": [
+                        "0026"
+                    ]
+                }, 
+                {
+                    "content": "你看上去很和善啊~", 
+                    "nextXianzhe": [
+                        "0030"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "id": "0029", 
+            "details": [
+                [
+                    "你这么想我也没办法∣(-_-)∣"
+                ], 
+                [
+                    "你管的着吗，你走(‘▽′)Ψ"
+                ], 
+                [
+                    "你怎么这么烦人啊(~>__<~)"
+                ], 
+                [
+                    "友尽.... (╯￣Д￣)╯╘═╛ (ノ=Д=)ノ┻━┻ （╯#-皿-)╯~~╧═╧ (╯’ – ‘)╯︵ ┻━┻"
+                ], 
+                [
+                    "我们分手吧！(#‘′) "
+                ]
+            ]
+        }, 
+        {
+            "id": "0030", 
+            "details": [
+                [
+                    "大家说我整天笑眯眯的，好像天天有喜事", 
+                    "其实这是我的生活态度啦，与人为善,于己为善", 
+                    "而且和我说话你的笑纹也会变多哦", 
+                    "每于呆拙见聪明，一麾善噱生花笔"
+                ]
+            ],
+			 "responses": [
+                {
+                    "content": "不错，我要和你做朋友！", 
+                    "nextXianzhe": [
+                        "0026"
+                    ]
+                }
+            ]
+        }, 
+		{
+            "id": "0031", 
+            "details": [
+                [
+                    "杨梅酒新酿",
+					"酌与君尝"
+                ], 
+                [
+                    "万里长风",
+					"千峦叠嶂",
+					"松枝劲劲尘烟荡",
+					"胸怀须向碧空开",
+					"从来逸兴因豪放"
+                ], 
+                [
+                    "回首望",
+					"一十三年名利场",
+					"泪水辛诗两行"
+                ], 
+                [
+                    "迟迟春日浓荫旁",
+					"痴儿初著衣淡黄",
+					"娇憨扑爹娘",
+					"疏篱旁",
+					"小竹窗",
+					"一树溶溶光"
+                ], 
+                [
+                    "明月他乡易见",
+					"故友此地难逢",
+					"三杯两盏淡酒",
+					"一枕清风入梦"
+                ]
+            ]
+        }, 
+        {
+            "id": "0032", 
+            "details": [
+                [
+                    "这是我写给儿子的哦",
+					"<a href='http://zhangweixiang.com/private/xixi/index.html'>进去瞅瞅</a>"
+                ], 
+                [
+                    "这是我上学时写给老婆的哦",
+					"<a href='http://zhangweixiang.com/private/love/index.html'>进去瞅瞅</a>"
+                ], 
+                [
+                    "这是我小站的里程碑",
+					"<a href='http://zhangweixiang.com/history-date.html'>进去瞅瞅</a>"
+                ], 
+                [
+                    "在这里你可以写写画画",
+					"<a href='http://zhangweixiang.com/windows/paint.html'>进去体验一把</a>"
+                ], 
+				[
+                    "这个是我自己写给家人的网页，因为很久了，大部分只能适合用电脑看",
+					"<a href='http://zhangweixiang.com/private/'>进去瞅瞅</a>"
+                ],
+                [
+                    "这是我以前写的音乐播放页面，还可以分享和下载哦",
+					"<a href='http://zhangweixiang.com/private/m/palmusic.html'>进去体验一把</a>"
+                ],
+                [
+                    "你知道吗？",
+					"电脑访问和手机访问zhangweixiang.com，页面是不一样的哦"
+                ]
+            ]
+        }, 
+		{
+            "id": "0034", 
+            "details": [
+                [
+                    "喜欢听吉他吗？来一首Palmas de Oro吧",
+					"<iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=198 height=52 src='http://music.163.com/outchain/player?type=2&id=16343098&auto=1&height=32'></iframe>"
+                ], 
+                [
+                    "喜欢听钢琴曲吗？来一首Flower Dance吧",
+					"<iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=198 height=52 src='http://music.163.com/outchain/player?type=2&id=406238&auto=1&height=32'></iframe>"
+                ], 
+                [
+                    "喜欢听女声吗？来一首童话镇吧",
+					"<iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=198 height=52 src='http://music.163.com/outchain/player?type=2&id=432506345&auto=1&height=32'></iframe>"
+                ], 
+                [
+                    "喜欢听钢琴曲吗？来一首罗密欧与朱丽叶吧",
+					"<iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=198 height=52 src='http://music.163.com/outchain/player?type=2&id=34341353&auto=1&height=32'></iframe>"
+                ], 
+                [
+                    "喜欢听交响曲吗？来一首VltavaRiver吧",
+					"<iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=198 height=52 src='http://music.163.com/outchain/player?type=2&id=31838385&auto=1&height=32'></iframe>"
+                ]
+            ]
+        }, 
+        {
+            "id": "0024", 
+            "details": [
+                [
+                    "网站每年需要花一两百块来维护，当然比起所花费的精力，这点钱也不算什么了", 
+                    "这两天又连续收到一份份短信，不知不觉网站又要到期了。我听到钱包咕噜咕噜的声音(T_T)", 
+                    "<img src='img/fee.png'>"
+                ]
+            ], 
+            "responses": [
+                {
+                    "content": "挺辛苦啊，给你点打赏", 
+                    "nextXianzhe": [
+                        "0018"
+                    ]
+                }, 
+                {
+                    "content": "唔……继续努力！", 
+                    "nextXianzhe": [
+                        "0026"
+                    ]
+                }
+            ]
+        }
+    ], 
+    "fromUser": [
+        {
+            "id": "1000", 
+            "brief": "对话", 
+            "details": [
+                "我还要再玩一遍对话游戏"
+            ], 
+            "nextXianzhe": [
+                "0000"
+            ]
+        }, 
+        {
+            "id": "1001", 
+            "brief": "爱好", 
+            "details": [
+                "你有什么业余爱好呀？", 
+                "你的业余时间都做什么呀？"
+            ], 
+            "nextXianzhe": [
+                "0012"
+            ]
+        },
+        {
+            "id": "1003", 
+            "brief": "家庭", 
+            "details": [
+                "你的宝宝好逗啊，嘿嘿……", 
+                "晒下你的宝宝吧"
+            ], 
+            "nextXianzhe": [
+                "0022"
+            ]
+        }, 
+        {
+            "id": "1004", 
+            "brief": "链接", 
+            "details": [
+				"作为首页是不是应该有导航链接啊",
+                "我要找到网站的快速链接~"
+            ], 
+            "nextXianzhe": [
+                "0008"
+            ]
+        }, 
+        {
+            "id": "1005", 
+            "brief": "简历", 
+            "details": [
+                "可以看看你的简历吗？"
+            ], 
+            "nextXianzhe": [
+                "0011"
+            ]
+        }, 
+        {
+            "id": "1006", 
+            "brief": "职业", 
+            "details": [
+                "你究竟靠什么吃饭呢？"
+            ], 
+            "nextXianzhe": [
+                "0007"
+            ]
+        }, 
+        {
+            "id": "1007", 
+            "brief": "真相", 
+            "details": [
+                "求真相", 
+                "此章微详！我要看你的庐山真面目~~"
+            ], 
+            "nextXianzhe": [
+                "0028"
+            ]
+        }, 
+        {
+            "id": "1008", 
+            "brief": "打赏", 
+            "details": [
+                "你好棒啊！我想给你点鼓励~~"
+            ], 
+            "nextXianzhe": [
+                "0018"
+            ]
+        }, 
+        {
+            "id": "1002", 
+            "brief": "彩蛋", 
+            "details": [
+                "嘿嘿，有彩蛋吗？"
+            ], 
+            "nextXianzhe": [
+                "0032"
+            ]
+        }, 
+        {
+            "id": "1009", 
+            "brief": "关于", 
+            "details": [
+                "你的网站好有意思啊！", 
+                "这个主页的创意也很棒~"
+            ], 
+            "nextXianzhe": [
+                "0026", 
+                "0023"
+            ]
+        }
+    ]
+}
