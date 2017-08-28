@@ -4,7 +4,7 @@ setTimeout(function() {
 	mainPath = mainPath == "/"? window.location.href:mainPath;//frontPage
 	var title = ($(document).attr("title") == null) ? $('title').text() : $(document).attr("title");
 		 $.ajax({
-			url: 'http://www.zhangweixiang.com/visitinfo.ashx?url='+mainPath+'&from=mysite&title=' + $.trim(title),
+			url: 'http://www.zhangweixiang.com/visitinfo.ashx?url='+mainPath+'&from=mobile&title=' + $.trim(title),
 			dataType: 'jsonp',
 			timeout: 1000 * 3, // 3 sec
 			jsonp: "callback",  
