@@ -3,20 +3,16 @@ var visitCount = null;
 (function () {
     loadVisit();
 
-    const AUTHOR = {
+    var AUTHOR = {
         XIANZHE: 'xianzhe',
         ME: 'me'
     };
 
-    const TYPING_MSG_CONTENT = `
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-    `;
+    var TYPING_MSG_CONTENT = "<div class='dot'></div><div class='dot'></div><div class='dot'></div>";
 
     let msgSendingHandler = null;
 
-    const vm = new Vue({
+    var vm = new Vue({
         el: '#mobile',
 
         data: {
@@ -30,20 +26,20 @@ var visitCount = null;
             latestMsgContent: null
         },
 
-        mounted() {
-            $.getJSON('./assets/funnyDialog.json', data => {
-                this.dialogs = data;
+        mounted:function () {
+            $.getJSON('./assets/funnyDialog.json', function(data){
+                vm.dialogs = data;
 
-                this.nextTopics = this.dialogs.fromUser;
+                vm.nextTopics = vm.dialogs.fromUser;
 
-                this.appendDialog('0000');
+                vm.appendDialog('0000');
             });
         },
 
         methods: {
-            appendDialog(id) {
+            appendDialog: function(id) {
                 if (typeof id === 'object' && id.length > 0) {
-                    id.forEach(id => this.appendDialog(id));
+                    id.forEach(function(id){return vm.appendDialog(id);});
                     return;
                 }
                 else if (id == null) {
@@ -53,24 +49,24 @@ var visitCount = null;
 
                 this.isXianzheTyping = true;
 
-                const dialog = this.getDialog(id);
+                var dialog = this.getDialog(id);
 
                 getRandomMsg(dialog.details)
-                    .forEach(content => {
-                        this.msgChain = this.msgChain
-                            .then(() => delay(700))
-                            .then(() => this.sendMsg(content, AUTHOR.XIANZHE));
+                    .forEach(function(content){
+                       return vm.msgChain = vm.msgChain
+                            .then(function() {return delay(700)})
+                            .then(function() {return vm.sendMsg(content, AUTHOR.XIANZHE)});
                     });
 
                 return dialog.nextXianzhe
-                    ? this.appendDialog(dialog.nextXianzhe)
-                    : this.msgChain.then(() => {
-                        this.lastDialog = dialog;
-                        this.isXianzheTyping = false;
+                    ? vm.appendDialog(dialog.nextXianzhe)
+                    : vm.msgChain.then(function(){
+                        vm.lastDialog = dialog;
+                        vm.isXianzheTyping = false;
                     });
             },
 
-            sendMsg(message, author) {
+            sendMsg: function(message, author) {
                 switch (author) {
                     case 'me':
                         return this.sendUserMsg(message);
@@ -79,13 +75,13 @@ var visitCount = null;
                 }
             },
 
-            sendFriendMsg(message, author) {
-                const content = getRandomMsg(message);
-                const length = content.replace(/<[^>]+>/g,"").length;
-                const isImg = /<img[^>]+>/.test(content);
-                const isTyping = length > 5 || isImg;
+            sendFriendMsg: function(message, author) {
+                var content = getRandomMsg(message);
+                var length = content.replace(/<[^>]+>/g,"").length;
+                var isImg = /<img[^>]+>/.test(content);
+                var isTyping = length > 5 || isImg;
 				
-                const msg = {
+                var msg = {
                     author: author,
                     content: isTyping ? TYPING_MSG_CONTENT : content,
                     isImg: isImg
@@ -93,15 +89,15 @@ var visitCount = null;
                 this.messages.push(msg);
 
                 if (isTyping) {
-                    this.markMsgSize(msg);
+                    this.markMsgSize(msg,null);
                     setTimeout(updateScroll);
 
                     return delay(Math.min(100 * length, 2000))
-                        .then(() => {
-                            return this.markMsgSize(msg, content);
+                        .then(function(){
+                            return vm.markMsgSize(msg, content);
                         })
-                        .then(() => delay(150))
-                        .then(() => {
+                        .then(function(){return delay(150)})
+                        .then(function(){
                             msg.content = content;
                             onMessageSending();
                         });
@@ -112,7 +108,7 @@ var visitCount = null;
                 return Promise.resolve();
             },
 
-            sendUserMsg(message) {
+            sendUserMsg: function(message) {
                 this.messages.push({
                     author: AUTHOR.ME,
                     content: message
@@ -123,30 +119,32 @@ var visitCount = null;
                 return Promise.resolve();
             },
 
-            markMsgSize(msg, content = null) {
+            markMsgSize:function(msg, content) {
                 this.latestMsgContent = content || msg.content;
 
                 return delay(0)
-                    .then(() => msg.isImg && onImageLoad($('#mock-msg img')))
-                    .then(() => {
+                    .then(function() { return msg.isImg && onImageLoad($('#mock-msg img'))})
+                    .then(function(){
                         Object.assign(msg, getMockMsgSize());
-                        this.messages = [...this.messages];
+                        //vm.messages = [...vm.messages];
+						vm.messages = vm.messages.splice(',');
+						
                     });
             },
 
-            getDialog(id) {
-                const dialogs = this.dialogs.fromXianzhe
-                    .filter(dialog => dialog.id === id);
+            getDialog: function(id) {
+                var dialogs = this.dialogs.fromXianzhe
+                    .filter(function(dialog){return dialog.id === id});
                 return dialogs ? dialogs[0] : null;
             },
 			
-            getDialogFromUser(id) {
-                const dialogs = this.dialogs.fromUser
-                    .filter(dialog => dialog.id === id);
+            getDialogFromUser: function(id) {
+                var dialogs = this.dialogs.fromUser
+                    .filter(function(dialog){return dialog.id === id});
                 return dialogs ? dialogs[0] : null;
             },
 
-            togglePrompt(toShow) {
+            togglePrompt: function(toShow) {
                 if (this.isXianzheTyping) {
                     return;
                 }
@@ -154,30 +152,30 @@ var visitCount = null;
                 this.hasPrompt = toShow;
             },
 
-            respond(response) {
+            respond: function(response) {
                 return this.say(response.content, response.nextXianzhe);
             },
 
-            ask(fromUser) {
+            ask: function(fromUser) {
 
-                const content = getRandomMsg(fromUser.details);
+                var content = getRandomMsg(fromUser.details);
                 return this.say(content, fromUser.nextXianzhe);
             },
 
-            say(content, dialogId) {
+            say: function(content, dialogId) {
                 this.hasPrompt = false;
 
                 return delay(200)
-                    .then(() => this.sendMsg(content, AUTHOR.ME))
-                    .then(() => delay(300))
-                    .then(() => this.appendDialog(dialogId));
+                    .then(function() { vm.sendMsg(content, AUTHOR.ME);})
+                    .then(function() {return delay(300)})
+                    .then(function() {vm.appendDialog(dialogId);});
             }
         }
         });
 
     function loadVisit() {
         $.ajax({
-            url: 'http://www.zhangweixiang.com/visitInfo.ashx?method=get',//&from=mobile
+            url: 'http://www.zhangweixiang.com/visitInfo.ashx?method=get&from=mobile',
 	    dataType: 'jsonp',
             timeout: 1000 * 3, // 3 sec
 	    jsonp: "callback",  
@@ -239,7 +237,7 @@ var visitCount = null;
             return dealContent(messages);
         }
 
-        const id = Math.floor(Math.random() * messages.length);
+        var id = Math.floor(Math.random() * messages.length);
         return messages[id];
     }
 
@@ -248,11 +246,11 @@ var visitCount = null;
      * UI updating when new message is sending
      */
     function onMessageSending() {
-        setTimeout(() => {
+        setTimeout(function() {
             // update scroll position when vue has updated ui
             updateScroll();
 
-            const $latestMsg = $('#mobile-body-content .msg-row:last-child .msg');
+            var $latestMsg = $('#mobile-body-content .msg-row:last-child .msg');
 
             // add target="_blank" for links
             $latestMsg.find('a').attr('target', '_blank');
@@ -263,27 +261,27 @@ var visitCount = null;
     }
 
     function updateScroll() {
-        const $chatbox = $('#mobile-body-content');
+        var $chatbox = $('#mobile-body-content');
 
-        const distance = $chatbox[0].scrollHeight - $chatbox.height() - $chatbox.scrollTop();
-        const duration = 250;
-        const startTime = Date.now();
+        var distance = $chatbox[0].scrollHeight - $chatbox.height() - $chatbox.scrollTop();
+        var duration = 250;
+        var startTime = Date.now();
 
         requestAnimationFrame(function step() {
-            const p = Math.min(1, (Date.now() - startTime) / duration);
+            var p = Math.min(1, (Date.now() - startTime) / duration);
             $chatbox.scrollTop($chatbox.scrollTop() + distance * p);
             p < 1 && requestAnimationFrame(step);
         });
     }
 
-    function delay(amount = 0) {
-        return new Promise(resolve => {
+    function delay(amount) {
+        return new Promise(function(resolve) {
             setTimeout(resolve, amount);
         });
     }
 
     function getMockMsgSize() {
-        const $mockMsg = $('#mock-msg');
+        var $mockMsg = $('#mock-msg');
         return {
             width: $mockMsg.width(),
             height: $mockMsg.height()
@@ -291,9 +289,9 @@ var visitCount = null;
     }
 
     function onImageLoad($img) {
-        return new Promise(resolve => {
+        return new Promise(function(resolve) {
             $img.one('load', resolve)
-                .each((index, target) => {
+                .each(function(index, target){
                     // trigger load when the image is cached
                     target.complete && $(target).trigger('load');
                 });
