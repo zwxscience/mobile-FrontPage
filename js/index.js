@@ -10,7 +10,7 @@ var visitCount = null;
 
     var TYPING_MSG_CONTENT = "<div class='dot'></div><div class='dot'></div><div class='dot'></div>";
 
-    let msgSendingHandler = null;
+   // let msgSendingHandler = null;
 
     var vm = new Vue({
         el: '#mobile',
