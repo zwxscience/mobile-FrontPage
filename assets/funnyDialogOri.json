@@ -23,13 +23,13 @@
                 {
                     "content": "这是啥呀？你是谁？从哪来？要干什么？", 
                     "nextXianzhe": [
-                        "0002"
+                        "0002"      
                     ]
                 },
 		{
                     "content": "废话少说！", 
                     "nextXianzhe": [
-                        ""
+                        "0029"
                     ]
                 }
             ], 
@@ -255,7 +255,7 @@
             "details": [
                 [
                     "虽然暂时没有换工作的打算，不过对于有趣的工作机会保持开放态度", 
-                    "我的简历可以在 <a href='http://zhangweixiang.com/cv'>这里</a> 查看", 
+                    "我的简历可以在 <a href='https://cv.zhangweixiang.com/'>这里</a> 查看", 
                     "如果能认同我的技术能力和三观，欢迎邮件至 <a href='mailto:zwxscience@163.com'>zwxscience@163.com</a> ，求勾搭~", 
                     "其实换个领域工作，也挺不错的嘛~"
                 ]
@@ -495,7 +495,7 @@
             "details": [
                 [
                     "在庞大的网络中这里是个不起眼的地方，里面放一些日志或者自己觉得有意思的东西，分享给大家", 
-                    "这个是<a href='http://zhangweixiang.com/cv/'>我的简历</a>，票子多的地方请招手！", 
+                    "这个是<a href='https://cv.zhangweixiang.com/'>我的简历</a>，票子多的地方请招手！", 
                     "这个是<a href='http://blog.zhangweixiang.com/'>我的Blog</a>，里面会不定期写一些日志或者技术分享，最近都是写的关于娃的东西呢", 
 					"这个是<a href='https://github.com/zwxscience'>我的GitHub</a>，里面有你想看到的源码",
 					"这个是<a href='http://weibo.com/weixiazh'>我的微博</a>，欢迎互动"
